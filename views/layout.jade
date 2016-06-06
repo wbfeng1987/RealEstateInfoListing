@@ -1,0 +1,12 @@
+doctype html
+html(ng-app='mainApp')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/libs/bootstrap/dist/css/bootstrap.min.css')
+    script(src='/libs/angular/angular.min.js')
+    script(src='/libs/angular-route/angular-route.min.js')
+    script(src='/libs/angular-resource/angular-resource.min.js')
+    script(src='/javascripts/myapp.js')
+  body
+    block content

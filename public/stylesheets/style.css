@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.cell{
+    height: 150px;
+    overflow: scroll;
+}
+
+.myBtn {
+    width: 78px;
+}
+
+.myInput {
+	width: 70px;
+}
+
+.rightNav {
+	position: absolute;
+	right: 0;
+}
+
+.entireNav {
+	text-align: center;
+	position: relative;
+	width: 100%;
+}

@@ -1,0 +1,59 @@
+<h1 class="text-center">Detail Listing</h1>
+
+<br>
+<hr>
+<br>
+
+<nav class="entireNav">
+	<div class="rightNav">
+		<span>Jump to Page:</span>
+		<input type="number" class="myInput" ng-model="pageNumber">
+		<button class="btn btn-primary myBtn" ng-click="jump()">Go</button>
+	</div>
+	<div>
+		<ul class="pager">
+			<li><button class="btn btn-primary myBtn" ng-click="prev()">Previous</button></li>
+			<li><button class="btn btn-primary myBtn" ng-click="next()">Next</button></li>
+		</ul>
+	</div>
+</nav>
+
+<br>
+<hr>
+<br>
+
+<div ng-repeat = "listing in listings">
+	<div class="col-md-6">
+		<table class="table table-bordered table-hover">
+			<tbody>
+				<tr>
+					<th>Address</th>
+				<!-- <td>{{stripCommons(listing).Address.FullStreetAddress + \n + }}</td> -->
+					<td><pre class="text-right">{{listing.Address.FullStreetAddress + "\n" + listing.Address.City + ", " + listing.Address.StateOrProvince + ", " + listing.Address.PostalCode}}</pre></td>
+				</tr>
+				<tr>
+					<th>Price</th>
+					<td class="text-right">{{"\$" + listing.ListPrice._}}</td>
+				</tr>
+				<tr>
+					<th>Lot Size</th>
+					<td class="text-right">{{listing.LotSize._ + " " + listing.LotSize.$.areaUnits}}</td>
+				</tr>
+				<tr>
+					<th>Bedrooms</th>
+					<td class="text-right">{{listing.Bedrooms}}</td>
+				</tr>
+				<tr>
+					<th>
+						Description
+						<button class="btn btn-success" ng-click="tran($index)">Translate
+						</button>
+					</th>
+					<td>
+						<div class="cell">{{$index}}{{listing.ListingDescription}}</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
